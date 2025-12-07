@@ -1,35 +1,99 @@
-# Ignorar TODOS los archivos primero
+# ============================================
+# GITIGNORE ESTRICTO - SOLO ARCHIVOS DE CÓDIGO
+# ============================================
+
+# Ignora TODO por defecto
 *
 
-# Luego, excluir (NO ignorar) los archivos de código que SÍ quieres
-!*.java
+# ============================================
+# EXCEPCIONES: Solo estos archivos se subirán
+# ============================================
+
+# Archivos de Python
+!*.py
+!*.pyw
+
+# Archivos de C#
+!*.cs
+
+# Archivos de JavaScript/TypeScript
 !*.js
 !*.jsx
 !*.ts
 !*.tsx
-!*.cpp
-!*.hpp
-!*.cc
-!*.hh
-!*.c
-!*.h
-!*.cs
-!*.py
-!*.pyw
 
-# Excluir también las carpetas (necesario para que Git pueda acceder a los archivos dentro)
+# Archivos de Java
+!*.java
+
+# Archivos de C/C++
+!*.cpp
+!*.cc
+!*.cxx
+!*.c
+!*.hpp
+!*.hh
+!*.hxx
+!*.h
+
+# ============================================
+# ARCHIVOS DE CONFIGURACIÓN ESENCIALES
+# ============================================
+
+# Archivo gitignore (obligatorio)
+!.gitignore
+
+# Documentación básica
+!README.md
+!README.txt
+!README
+!LICENSE.md
+!LICENSE.txt
+!LICENSE
+!COPYING
+
+# Archivos de configuración de proyectos
+!package.json      # Node.js
+!requirements.txt  # Python
+!pom.xml           # Java Maven
+!build.gradle      # Java Gradle
+!*.csproj          # C# project
+!*.sln             # C# solution
+!CMakeLists.txt    # C/C++
+!Makefile
+
+# ============================================
+# CARPETAS (necesario para acceder a archivos)
+# ============================================
+
+# Permite todas las carpetas
 !*/
 
-# Archivos específicos que siempre deben estar en el repositorio
-!.gitignore
-!README.md
-!LICENSE
+# ============================================
+# EXCLUSIONES ESPECÍFICAS DENTRO DE CARPETAS
+# ============================================
 
-# Excepciones adicionales para archivos de configuración de proyectos
-!package.json
-!requirements.txt
-!pom.xml
-!*.csproj
-!*.sln
-!CMakeLists.txt
-!Makefile
+# Excluye carpetas de dependencias y builds
+node_modules/
+__pycache__/
+.vs/
+.vscode/
+.idea/
+bin/
+obj/
+dist/
+build/
+out/
+target/
+*.egg-info/
+
+# Excluye archivos dentro de carpetas permitidas que no sean de código
+**/*.dll
+**/*.pdb
+**/*.exe
+**/*.class
+**/*.pyc
+**/*.pyo
+*.so
+*.a
+*.lib
+*.dylib
