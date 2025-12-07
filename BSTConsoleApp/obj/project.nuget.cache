@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TsZlraLfZK0=",
+  "success": true,
+  "projectFilePath": "/home/aboytes/Documents/3-Semestre/GitKraken/EstructurasDatos/BSTConsoleApp/BSTConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "/home/aboytes/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.21/microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}
